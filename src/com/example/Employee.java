@@ -13,7 +13,7 @@ package com.example;
  */
 public class Employee {
     
-    private int empID;
+    private int empId;
     private String name;
     private String ssn;
     private double salary;
@@ -37,12 +37,12 @@ public class Employee {
     
     
     
-    public int getEmpID() {
-        return empID;
+    public int getEmpId() {
+        return empId;
     }
 
-    public void setEmpID(int empID) {
-        this.empID = empID;
+    public void setEmpID(int empId) {
+        this.empId = empId;
     }
 
     public String getName() {
@@ -69,5 +69,14 @@ public class Employee {
         this.salary = salary;
     }
     
+    public void printEmployee() {
+
+        System.out.println(); // Print a blank line as a separator
+        // Print out the data in this Employee object
+        System.out.println("Employee id:         " +getEmpId());
+        System.out.println("Employee name:       " + getName());
+        System.out.println("Employee SSN:  " + getSsn());
+        System.out.println("Employee salary:     " + getSalary());
+    }
     
 }

@@ -25,4 +25,15 @@ public class Director extends Manager{
         this.region = region;
     }
     
+    
+    @Override
+    
+    public void printEmployee(){
+        
+        super.printEmployee();
+        System.out.println("Departamento "+region);
+        
+    }
+
+    
 }

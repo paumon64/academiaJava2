@@ -27,4 +27,12 @@ public class Manager extends Employee {
         this.depName = depName;
     }
     
+        @Override
+    
+    public void printEmployee(){
+        
+        super.printEmployee();
+        System.out.println("Departamento "+depName);
+        
+    }
 }
