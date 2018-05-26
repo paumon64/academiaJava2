@@ -16,6 +16,10 @@ public class Director extends Manager{
     public Director (){
         super();
     }
+   public Director(int empId, String name, String ssn, double salary, String depName, String region) {
+        super(empId, name, ssn, salary, depName);
+        this.region = region;
+    }
 
     public String getRegion() {
         return region;
@@ -25,13 +29,17 @@ public class Director extends Manager{
         this.region = region;
     }
     
-    
+//     @Override
+//    public String getDetails() {
+//        return super.getDetails() +"\n"+ " Regiao = " +region;
+//        } 
+     
     @Override
     
     public void printEmployee(){
         
         super.printEmployee();
-        System.out.println("Departamento "+region);
+        System.out.println("Region  "+region);
         
     }
 

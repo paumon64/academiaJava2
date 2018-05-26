@@ -10,8 +10,8 @@ package com.example;
  * @author Utilizador
  */
 public class EmployeeStockPlan {
-    
-private final int employeeShares = 10;
+
+    private final int employeeShares = 10;
     private final int managerShares = 100;
     private final int directorShares = 1000;
 
@@ -31,5 +31,3 @@ private final int employeeShares = 10;
         }
     }
 }
-    
-   
