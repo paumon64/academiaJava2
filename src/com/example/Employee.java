@@ -5,44 +5,51 @@
  */
 package com.example;
 
-
+import java.text.NumberFormat;
 
 /**
  *
  * @author paumon64
  */
 public class Employee {
-    
-    private int empID;
+
+    private int empId;
     private String name;
     private String ssn;
     private double salary;
+
+    public Employee() {
+
+    }
     
-    public Employee(){
-
-}
-
-    public void changeName(String newName){
+    public Employee (int empId, String name, String ssn, double salary){
         
-        if (newName != null ){
-        this.name = newName;
+        this.empId=empId;
+        this.name=name;
+        this.ssn=ssn;
+        this.salary=salary;
     }
+
+    public void changeName(String newName) {
+
+        if (newName != null) {
+            this.name = newName;
+        }
     }
-    public void riseSalary (double increase){
-        
-        if (increase >0 ){
+
+    public void riseSalary(double increase) {
+
+        if (increase > 0) {
             this.salary += increase;
         }
     }
-    
-    
-    
-    public int getEmpID() {
-        return empID;
+
+    public int getEmpId() {
+        return empId;
     }
 
-    public void setEmpID(int empID) {
-        this.empID = empID;
+    public void setEmpId(int empId) {
+        this.empId = empId;
     }
 
     public String getName() {
@@ -68,6 +75,14 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
-    
-    
+
+    public String getDetails() {
+
+        return "Employee ID:     " + getEmpId() + "\n"
+                + "Employee Name:   " + getName() + "\n"
+                + "Employee SSN:    " + getSsn() + "\n"
+                + "Employee Salary: " + NumberFormat.getCurrencyInstance().format(getSalary());
+
+    }
+
 }

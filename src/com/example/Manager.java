@@ -19,6 +19,11 @@ public class Manager extends Employee {
         
     }
 
+    public Manager (int empId, String name, String ssn, double salary, String depName){
+        super(empId, name, ssn, salary);
+        this.depName = depName;
+    } 
+    
     public String getDepName() {
         return depName;
     }
@@ -27,4 +32,9 @@ public class Manager extends Employee {
         this.depName = depName;
     }
     
+    @Override
+    public String getDetails(){
+        
+        return super.getDetails()+" Departamento = "+depName;
+    }
 }

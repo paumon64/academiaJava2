@@ -18,36 +18,43 @@ public class EmployeeTest {
         
         Employee emp =  new  Employee();
         
-        emp.setEmpID(1000);
+        emp.setEmpId(1000);
         emp.setName("john smiths");
         emp.setSsn("pt234567");
         emp.setSalary(12000.00);
         
+        Employee emp2 = new Manager (1002, "Joan Kern", "012-23-4567", 110450.54, "Sales");
+          
+        System.out.println("Nome empregado com dep name "+emp2.getDetails());
         
         
-        System.out.println("ID "+emp.getEmpID());
-        System.out.println("name  "+emp.getName());
-        System.out.println("SS number "+emp.getSsn());
-        System.out.println("salary "+emp.getSalary());
+//        System.out.println("ID "+emp.getEmpId());
+//        System.out.println("name  "+emp.getName());
+//        System.out.println("SS number "+emp.getSsn());
+//        System.out.println("salary "+emp.getSalary());
         
+        System.out.println("Empregado "+emp.getDetails());
+
         emp.riseSalary(222.0);
         
-        System.out.println("new salary "+emp.getSalary());
-        
+        System.out.println("Employee new salary "+emp.getDetails());
         
         
         
         Manager mgr = new Manager ();
         
-        mgr.setEmpID(99999);
+        mgr.setEmpId(99999);
         mgr.setName("Lois Lane");
         mgr.setSsn("us9876543");
         mgr.setSalary(100000.00);
         mgr.setDepName("marketing");
         
+        /**
         System.out.print(mgr.getName());
         System.out.println(" manager of department "+mgr.getDepName());
+        **/
         
+        System.out.println("Novo manager " +mgr.getDetails());
         
         Admin adm = new Admin();
         
@@ -63,7 +70,12 @@ public class EmployeeTest {
         dir.setRegion("north");
         dir.setDepName("Sales");
         
-        System.out.println("nome "+dir.getName()+" "+dir.getDepName()+" "+dir.getSalary());
+        
+        
+        
+        
+     //   System.out.println("nome "+dir.getName()+" "+dir.getDepName()+" "+dir.getSalary());
+        
         
 
     }
