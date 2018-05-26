@@ -12,7 +12,11 @@ import java.text.NumberFormat;
  * @author paumon64
  */
 public class Employee {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> f2b9d453168e477cf2270e9bdfa80c8cb4dab032
     private int empId;
     private String name;
     private String ssn;
@@ -43,12 +47,22 @@ public class Employee {
             this.salary += increase;
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+    
+    
+>>>>>>> f2b9d453168e477cf2270e9bdfa80c8cb4dab032
     public int getEmpId() {
         return empId;
     }
 
+<<<<<<< HEAD
     public void setEmpId(int empId) {
+=======
+    public void setEmpID(int empId) {
+>>>>>>> f2b9d453168e477cf2270e9bdfa80c8cb4dab032
         this.empId = empId;
     }
 
@@ -75,6 +89,7 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+<<<<<<< HEAD
 
     public String getDetails() {
 
@@ -85,4 +100,17 @@ public class Employee {
 
     }
 
+=======
+    
+    public void printEmployee() {
+
+        System.out.println(); // Print a blank line as a separator
+        // Print out the data in this Employee object
+        System.out.println("Employee id:         " +getEmpId());
+        System.out.println("Employee name:       " + getName());
+        System.out.println("Employee SSN:  " + getSsn());
+        System.out.println("Employee salary:     " + getSalary());
+    }
+    
+>>>>>>> f2b9d453168e477cf2270e9bdfa80c8cb4dab032
 }

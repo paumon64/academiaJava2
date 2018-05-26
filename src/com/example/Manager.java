@@ -32,9 +32,19 @@ public class Manager extends Employee {
         this.depName = depName;
     }
     
+<<<<<<< HEAD
     @Override
     public String getDetails(){
         
         return super.getDetails()+" Departamento = "+depName;
+=======
+        @Override
+    
+    public void printEmployee(){
+        
+        super.printEmployee();
+        System.out.println("Departamento "+depName);
+        
+>>>>>>> f2b9d453168e477cf2270e9bdfa80c8cb4dab032
     }
 }
