@@ -17,17 +17,18 @@ public class Employee {
     private String name;
     private String ssn;
     private double salary;
+    private BenefitsHelper helper = new BenefitsHelper();
 
     public Employee() {
-
+        super();
     }
-    
-    public Employee (int empId, String name, String ssn, double salary){
-        
-        this.empId=empId;
-        this.name=name;
-        this.ssn=ssn;
-        this.salary=salary;
+
+    public Employee(int empId, String name, String ssn, double salary) {
+
+        this.empId = empId;
+        this.name = name;
+        this.ssn = ssn;
+        this.salary = salary;
     }
 
     public void changeName(String newName) {
@@ -44,13 +45,9 @@ public class Employee {
         }
     }
 
-    
-    
-
     public int getEmpId() {
         return empId;
     }
-
 
     public void setEmpId(int empId) {
         this.empId = empId;
@@ -80,6 +77,13 @@ public class Employee {
         this.salary = salary;
     }
 
+    public double getWitholding() {
+        return helper.calcWitholding(salary);
+    }
+
+    public double getBonus() {
+        return helper.calcBonus(salary);
+    }
 
     public String getDetails() {
 
@@ -94,11 +98,25 @@ public class Employee {
 
         System.out.println(); // Print a blank line as a separator
         // Print out the data in this Employee object
-        System.out.println("Employee id:         " +getEmpId());
+        System.out.println("Employee id:         " + getEmpId());
         System.out.println("Employee name:       " + getName());
         System.out.println("Employee SSN:  " + getSsn());
         System.out.println("Employee salary:     " + getSalary());
     }
-    
+
+    private class BenefitsHelper {
+
+        private final double bonusRate = 0.02;
+        private final double witholdingRate = 0.07;
+
+        protected double calcBonus(double salary) {
+            return salary * bonusRate;
+        }
+
+        protected double calcWitholding(double salary) {
+            return salary * witholdingRate;
+        }
+
+    }
 
 }

@@ -92,20 +92,23 @@ public class EmployeeTest {
         printEmployee(dir, esp);
         printEmployee(emp, esp);
         printEmployee(emp2, esp);
-        
-                
-        
+
         // up and down cast 
-        
         Engineer eng = new Engineer(101, "Jane Smith", "012-34-5678", 120_345.27);
         Employee emp3 = new Employee(13, "Lionel Power", "099-90-6789", 67_990.90);
         Employee obj = new Engineer(102, "Robert Stock", "012-54-7812", 220_345.27);
 
         eng.engineerMethod();
         //printEmployee(obj);
-        printEmployee(eng,esp);
+        printEmployee(eng, esp);
 
-        
+        // teste inner classes in class Employee
+        Employee jane = new Employee(3001, "Jane Doe", "US998899", 65000);
+        Employee john = new Employee(4401, "John Doe", "UK66344", 55000);
+
+        System.out.println("Jane's witholding: " + jane.getWitholding());
+        System.out.println("John's bonus " + john.getBonus()); 
+
     }
 
     public static void printEmployee(Employee emp) {
@@ -118,5 +121,4 @@ public class EmployeeTest {
         System.out.println("Stock Options:   " + esp.grantStock(emp));
     }
 
-    
 }
